@@ -14,3 +14,23 @@
 .worldtabs{border-bottom-color:rgba(170,160,255,.14)}.worldtabs a.selected{background:rgba(45,37,88,.35);border-bottom-color:var(--gold)}.worldcontent{background:radial-gradient(ellipse at 78% 10%,rgba(84,69,173,.09),transparent 35%)}.worldactions a{border-color:rgba(170,160,255,.24);background:rgba(10,10,24,.45)}.worldstats div{border-top-color:rgba(170,160,255,.2)}
 @keyframes orbitSlow{to{transform:rotate(360deg)}}
 @media(max-width:520px){.dashhero:after{width:95px;height:95px;right:5vw;top:0;opacity:.65}.authbox:before{inset:-20px -12px}}
+
+/* YUGA cinematic world travel — portal expands into the selected world */
+.worldintro{overflow:hidden;background:radial-gradient(ellipse at 50% 50%,rgba(44,35,102,.72) 0%,rgba(7,6,18,.96) 38%,#020207 76%);transition:opacity .85s cubic-bezier(.2,.75,.2,1),visibility .85s}
+.worldintro:before{content:"";position:absolute;width:min(82vw,900px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(220,198,255,.22);box-shadow:0 0 35px rgba(121,99,230,.15),inset 0 0 55px rgba(121,99,230,.1),0 0 160px rgba(121,99,230,.08);animation:worldGate 1.8s cubic-bezier(.16,.7,.2,1) both}
+.worldintro:after{content:"";position:absolute;inset:-40%;pointer-events:none;background:repeating-conic-gradient(from 0deg at 50% 50%,transparent 0deg 7deg,rgba(202,187,255,.035) 7.2deg 7.5deg,transparent 7.8deg 14deg);mask-image:radial-gradient(circle,black 0%,transparent 58%);animation:travelSpin 2.2s ease-out both}
+.worldplanet{width:clamp(120px,19vw,210px);height:clamp(120px,19vw,210px);border-radius:50%;border:1px solid rgba(232,210,255,.4);background:radial-gradient(circle at 50% 50%,rgba(139,119,255,.2),rgba(25,19,58,.24) 42%,transparent 70%);box-shadow:0 0 40px rgba(132,111,255,.2),inset 0 0 50px rgba(151,130,255,.15);animation:portalExpand 1.8s cubic-bezier(.16,.7,.2,1) both}
+.worldplanet span{font:clamp(52px,9vw,90px) Georgia,serif;color:#f1e8ff;text-shadow:0 0 25px rgba(188,166,255,.7);animation:letterArrive 1.2s .15s both}
+.worldintro small,.worldintro h1,.worldintro p,.worldenter{position:relative;z-index:2;animation:yugaFadeUp .65s .25s both}
+.worldintro h1{letter-spacing:-.035em}.worldintro p{max-width:460px;padding:0 24px}.worldenter{letter-spacing:.24em;font-size:9px;color:#b8a9ff;margin-top:18px}
+.dashworld{transition:transform .6s cubic-bezier(.2,.75,.2,1),border-color .4s,box-shadow .4s;transform-style:preserve-3d}
+.dashworld:hover{transform:translateY(-8px) scale(1.015);box-shadow:0 22px 70px rgba(106,85,220,.16)}
+.dashworld:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.045) 48%,transparent 70%);transform:translateX(-110%);transition:transform .8s}
+.dashworld:hover:after{transform:translateX(110%)}
+.worldhead{background:rgba(3,3,10,.68);backdrop-filter:blur(18px)}
+@keyframes portalExpand{0%{transform:scale(.25);opacity:0;filter:blur(10px)}45%{opacity:1}100%{transform:scale(1);opacity:1;filter:blur(0)}}
+@keyframes worldGate{0%{transform:scale(.3) rotate(-25deg);opacity:0}55%{opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}
+@keyframes travelSpin{0%{transform:scale(.2) rotate(-90deg);opacity:0}45%{opacity:.9}100%{transform:scale(1.3) rotate(25deg);opacity:0}}
+@keyframes letterArrive{0%{opacity:0;transform:scale(.5);filter:blur(8px)}100%{opacity:1;transform:scale(1);filter:blur(0)}}
+@media(max-width:520px){.worldintro:before{width:115vw}.worldintro h1{font-size:42px}.worldenter{font-size:8px;letter-spacing:.14em}}
+@media(prefers-reduced-motion:reduce){.worldintro:before,.worldintro:after,.worldplanet,.worldplanet span,.worldintro small,.worldintro h1,.worldintro p,.worldenter{animation:none!important}}
