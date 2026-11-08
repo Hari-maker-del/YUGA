@@ -60,3 +60,30 @@ body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;bac
 @keyframes starDrift{0%{transform:translateY(0)}100%{transform:translateY(-18px)}}
 .topbar{border-bottom-color:rgba(180,174,255,.12)}.hero{isolation:isolate}.hero:before{background:radial-gradient(circle,rgba(113,91,255,.14),transparent 70%);width:650px;height:650px;left:-280px;top:-10%}.scene{border-color:rgba(180,174,255,.2);background:radial-gradient(ellipse at 50% 42%,#252047 0%,#101022 32%,#050610 68%,#020308 100%);box-shadow:0 0 100px rgba(79,62,180,.12),inset 0 0 70px rgba(125,108,255,.06)}.scene:before{content:"";position:absolute;inset:-20%;background:radial-gradient(ellipse at 65% 38%,rgba(100,79,230,.2),transparent 38%),radial-gradient(ellipse at 25% 70%,rgba(215,181,109,.08),transparent 35%);filter:blur(20px);animation:nebulaFloat 14s ease-in-out infinite alternate;pointer-events:none}.scene-label{color:#eee6ff}.scene-label small{color:#b7a9ff}.section{border-top-color:rgba(180,174,255,.12)}.worldcard{background:linear-gradient(145deg,rgba(22,20,44,.72),rgba(5,6,15,.92));border-color:rgba(180,174,255,.15)}.worldcard:hover{border-color:rgba(215,181,109,.6);box-shadow:0 15px 55px rgba(76,62,160,.12)}.footer{border-top-color:rgba(180,174,255,.12)}
 @keyframes nebulaFloat{from{transform:translate(-2%,1%) scale(1)}to{transform:translate(2%,-2%) scale(1.08)}}
+
+/* MOBILE COSMOS — turn the hero into an immersive, touch-first portal */
+.hint-mobile{display:none}
+.scene{border-radius:2px;isolation:isolate}
+.scene:after{z-index:3;box-shadow:inset 0 0 45px rgba(4,4,12,.35)}
+.scene:before{z-index:0}
+.scene canvas{position:relative;z-index:1;display:block;width:100%;height:100%}
+@media(max-width:650px){
+ .hint-desktop{display:none}.hint-mobile{display:inline}
+ .hero{position:relative}
+ .hero:after{content:"";position:absolute;pointer-events:none;z-index:-1;left:-15%;right:-15%;top:18%;height:420px;background:radial-gradient(ellipse,rgba(76,58,174,.17),rgba(22,18,55,.08) 42%,transparent 72%);filter:blur(18px)}
+ .hero .kicker{font-size:9px;letter-spacing:.2em;max-width:330px}
+ .hero h1{font-size:clamp(52px,13.2vw,68px);line-height:.96;letter-spacing:-.055em;text-shadow:0 0 35px rgba(131,111,255,.09)}
+ .hero p{color:#b7b4c6;font-size:14px;line-height:1.75;max-width:36ch}
+ .heroactions{display:grid;grid-template-columns:1fr 1fr}
+ .heroactions .button{display:flex;align-items:center;justify-content:center;min-height:52px;text-align:center}
+ .scrollhint{font-size:9px;letter-spacing:.16em;color:#a19abf;margin-top:22px}
+ .scene{height:clamp(340px,100vw,470px);margin-top:2px;border-color:rgba(170,157,255,.22);box-shadow:0 0 60px rgba(80,63,180,.15),inset 0 0 70px rgba(100,80,220,.12);overflow:hidden}
+ .scene:before{inset:-30%;background:radial-gradient(ellipse at 50% 40%,rgba(109,89,235,.25),transparent 38%),radial-gradient(ellipse at 35% 75%,rgba(215,181,109,.1),transparent 35%);animation:nebulaFloat 10s ease-in-out infinite alternate}
+ .scene-label{background:linear-gradient(90deg,rgba(4,4,12,.65),transparent);padding:10px 14px;left:0;bottom:12px;font-size:17px}
+ .scene-label small{font-size:8px;letter-spacing:.16em}
+ .section#worlds{padding-top:72px}
+ .worldcard{background:radial-gradient(ellipse at 80% 10%,rgba(93,77,190,.18),transparent 38%),linear-gradient(145deg,#111125,#030309);border-color:rgba(170,157,255,.2)}
+ .footer{padding-bottom:30px}
+}
+@media(max-width:380px){.heroactions{grid-template-columns:1fr}.scene{height:320px}}
+@media(prefers-reduced-motion:reduce){body:before,.scene:before{animation:none!important}}
