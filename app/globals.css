@@ -37,3 +37,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 @keyframes yugaSpin{to{transform:rotate(360deg)}}
 @keyframes yugaPageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.yugaPageEnter,.yugaSkeleton,.yugaSpinner{animation:none!important}}
+
+/* YUGA design-system refinements: motion, feedback, shared surfaces */
+:root{--yuga-bg:#050505;--yuga-panel:#0c0b09;--yuga-border:rgba(215,181,109,.18);--yuga-gold:#d7b56d;--yuga-gold-soft:#f5dfaa;--yuga-text:#f5f1e9;--yuga-muted:#9c9992;--yuga-radius:14px;--yuga-ease:cubic-bezier(.2,.75,.25,1)}
+::selection{background:rgba(215,181,109,.32);color:#fff}:focus-visible{outline:2px solid var(--yuga-gold);outline-offset:3px}img{max-width:100%}
+@keyframes yugaFadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes yugaShimmer{0%{background-position:120% 0}100%{background-position:-120% 0}}
+.yuga-enter{animation:yugaFadeUp .55s var(--yuga-ease) both}.yuga-panel{border:1px solid var(--yuga-border);background:linear-gradient(145deg,rgba(18,16,12,.9),rgba(5,5,5,.96));border-radius:var(--yuga-radius)}
+.yuga-skeleton{background:linear-gradient(100deg,#101010 20%,#1b1812 38%,#101010 56%);background-size:200% 100%;animation:yugaShimmer 1.5s ease-in-out infinite;border-radius:8px}
+.yuga-feedback{display:inline-flex;align-items:center;gap:8px;color:var(--yuga-muted);font-size:11px}.yuga-feedback:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--yuga-gold);box-shadow:0 0 10px rgba(215,181,109,.4)}
+.button,.navbutton,.filterChip,.savedToggle,.createSimilar,.viewLink{transition:all .22s var(--yuga-ease)}.button:active,.navbutton:active,button:active{transform:scale(.98)}
+@media(max-width:650px){.exploreHero{padding-top:42px}.exploreHeroRow{padding:25px 0 35px;gap:18px}.exploreHero h1{font-size:clamp(52px,15vw,82px)}.creationHero{padding-top:42px}.creationHeroRow{padding:24px 0 32px;gap:16px}.creationHero h1{font-size:clamp(44px,12vw,72px)}.collectionBar{align-items:stretch;flex-direction:column}.collectionTools{display:grid;grid-template-columns:1fr 1fr}.creationSearch{grid-column:1/-1;min-height:44px}.creationSearch input{width:100%;min-width:0}.collectionTools select{min-width:0;width:100%;min-height:42px}.creationGrid{columns:2;column-gap:10px}.creationCard{margin-bottom:14px}.creationCardMeta{display:block;padding:9px 1px}.creationCardMeta h3{font-size:16px}.viewLink{display:inline-block}.inspirationGrid{column-gap:10px}.inspirationImage{height:auto!important;min-height:180px;aspect-ratio:3/4}.inspirationMeta h3{font-size:16px}}
+@media(max-width:380px){.creationGrid{columns:1}.heroactions .button{flex:1;text-align:center}}@media(prefers-reduced-motion:reduce){.yuga-enter,.yuga-skeleton{animation:none!important}}
