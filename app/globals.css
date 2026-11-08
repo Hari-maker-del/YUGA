@@ -3,3 +3,20 @@
 @media(max-width:850px){.hero{grid-template-columns:1fr;min-height:0;align-items:start;padding:36px 0 56px;gap:30px}.scene{height:clamp(320px,58vw,460px);min-height:0}.worldgrid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.scrollhint{margin-top:24px}}
 @media(max-width:520px){.shell{width:calc(100% - 28px)}.topbar{height:58px}.brand{font-size:20px}.navbutton{padding:10px 11px;font-size:8px;letter-spacing:.1em}.hero{padding:30px 0 42px;gap:24px}.hero h1{font-size:clamp(48px,13vw,58px);margin:16px 0}.hero p{font-size:13px;line-height:1.7}.heroactions{margin-top:22px;gap:8px}.button{padding:12px 13px;font-size:9px}.scene{height:clamp(300px,88vw,380px)}.scene-label{left:16px;bottom:16px;font-size:19px}.worldgrid{grid-template-columns:1fr}.worldcard{height:260px}.section{padding:65px 0}.footer{gap:15px;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Shared mobile-first navigation + touch refinements */
+.yugaMobileNav{display:none}
+@media(max-width:650px){
+ body{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+ .yugaMobileNav{position:fixed;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom));z-index:1000;display:grid;grid-template-columns:repeat(4,1fr);align-items:center;padding:7px 5px;background:rgba(9,9,9,.92);border:1px solid rgba(215,181,109,.28);border-radius:18px;backdrop-filter:blur(20px);box-shadow:0 12px 40px rgba(0,0,0,.65)}
+ .yugaMobileNav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:45px;color:#85817a;text-decoration:none;transition:color .2s}
+ .yugaMobileNav a span{font-size:20px;line-height:1.1}
+ .yugaMobileNav a small{font-size:8px;letter-spacing:.06em}
+ .yugaMobileNav a.active{color:#d7b56d}
+ .yugaMobileNav a.active span{filter:drop-shadow(0 0 6px rgba(215,181,109,.3))}
+ .topbar{position:sticky;top:0;background:rgba(5,5,5,.9);backdrop-filter:blur(14px);z-index:50}
+ .button,.navbutton,button,a{touch-action:manipulation}
+ input,select,textarea{font-size:16px!important}
+ .footer{padding-bottom:24px}
+}
+@media(min-width:651px){.yugaMobileNav{display:none!important}}
