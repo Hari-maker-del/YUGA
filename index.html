@@ -27,12 +27,15 @@ footer{padding:36px 0;border-top:1px solid var(--line);display:flex;justify-cont
 @media(max-width:600px){.wrap{width:calc(100% - 32px)}header{height:68px}.logo{font-size:19px}.logo-mark{width:48px;height:48px;font-size:16px}nav{display:none}.hero{padding:55px 0}.hero h1{font-size:58px}.hero-art{height:360px}.section{padding:70px 0}.worlds{grid-template-columns:1fr}.world{min-height:360px}.process{grid-template-columns:1fr;gap:24px}.blue-band{padding:60px 0}footer{align-items:start;flex-direction:column}}
 
 .studio-panel{max-width:760px;border:1px solid #383838;background:#080808;padding:clamp(20px,4vw,42px);display:grid;gap:14px}.studio-label{font-size:10px;letter-spacing:.18em;color:#aeb4ff;text-transform:uppercase}.studio-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:18px}.studio-status{font-size:9px;letter-spacing:.15em;color:#777}.studio-panel select,.studio-panel textarea{width:100%;background:#111;color:#fff;border:1px solid #444;padding:15px;font:14px var(--sans);border-radius:0}.studio-panel textarea{resize:vertical;line-height:1.6}.studio-panel select:focus,.studio-panel textarea:focus{outline:1px solid #9ca6ff;border-color:#9ca6ff}.studio-panel button{justify-self:start;margin-top:10px}.studio-note{font-size:12px;color:#888;line-height:1.6;margin:0}
+
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}.plan{border:1px solid #343434;padding:28px;display:flex;flex-direction:column;position:relative;background:#070707}.plan.featured{border-color:#9ca6ff;background:linear-gradient(180deg,rgba(44,52,128,.22),#070707 45%)}.plan-badge{position:absolute;top:0;right:0;background:#9ca6ff;color:#000;padding:8px 12px;font-size:9px;letter-spacing:.12em}.plan-kicker{font-size:10px;letter-spacing:.18em;color:#aeb4ff}.plan h3{font:500 34px var(--serif);margin:18px 0 8px}.plan-price{font:500 30px var(--serif)}.plan-price small{font:11px var(--sans);color:#999}.plan-desc{font-size:12px;color:#999;min-height:36px}.plan ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:12px;color:#ccc;font-size:12px}.plan li:before{content:'✦';color:#9ca6ff;margin-right:10px}.plan-button{margin-top:auto;padding:14px 16px;background:transparent;border:1px solid #fff;color:#fff;text-transform:uppercase;letter-spacing:.12em;font-size:10px;cursor:pointer}.plan-button:hover,.plan-button.primary{background:#fff;color:#000}.pricing-footnote{font-size:11px;color:#777;line-height:1.7;margin-top:20px}.plan-feedback{color:#aeb4ff;font-size:12px;min-height:20px}
+@media(max-width:800px){.pricing-grid{grid-template-columns:1fr}.plan-desc{min-height:0}}
 </style>
 </head>
 <body>
 <header class="wrap">
 <a class="logo" href="#" aria-label="YUGA home"><img class="logo-mark" src="file_00000000f24c82119e235a78b73424b4.png" alt="YUGA emblem"> YUGA</a>
-<nav aria-label="Main navigation"><a href="#worlds">Design worlds</a><a href="#approach">Our approach</a><a href="#about">About</a></nav>
+<nav aria-label="Main navigation"><a href="#worlds">Design worlds</a><a href="#pricing">Plans</a><a href="#approach">Our approach</a><a href="#about">About</a></nav>
 <a class="nav-cta" href="#worlds">Explore YUGA ↗</a>
 </header>
 <main>
@@ -64,6 +67,15 @@ footer{padding:36px 0;border-top:1px solid var(--line);display:flex;justify-cont
 <label class="studio-label" for="styleSelect">CREATIVE DIRECTION</label><select id="styleSelect"><option>Editorial luxury</option><option>Minimalist</option><option>Futuristic</option><option>Organic / natural</option><option>Avant-garde</option><option>Photorealistic</option></select>
 <button class="btn btn-primary" id="createBtn" type="button">Shape my idea ↗</button><p class="studio-note" id="studioMessage" aria-live="polite">This is an interactive concept preview. AI image generation will be connected in a later phase.</p></div>
 </section>
+
+<section class="section wrap" id="pricing">
+<div class="section-head"><div><div class="eyebrow">Create more. Imagine further.</div><h2>Choose your universe.</h2></div><p>Start for free. Upgrade when your imagination needs more room.</p></div>
+<div class="pricing-grid">
+<article class="plan"><div class="plan-kicker">FOR EXPLORERS</div><h3>Free</h3><div class="plan-price">₹0 <small>/ forever</small></div><p class="plan-desc">A taste of what YUGA can create.</p><ul><li>20 starter credits</li><li>Access to all 4 design worlds</li><li>Standard generation queue</li><li>Personal use</li></ul><button class="plan-button" data-plan="Free">Start free ↗</button></article>
+<article class="plan featured"><div class="plan-badge">MOST POPULAR</div><div class="plan-kicker">FOR CREATORS</div><h3>Creator</h3><div class="plan-price">₹499 <small>/ month*</small></div><p class="plan-desc">Bring more of your ideas to life.</p><ul><li>200 monthly credits*</li><li>All design worlds</li><li>Priority generation*</li><li>Save and revisit creations*</li></ul><button class="plan-button primary" data-plan="Creator">Choose Creator ↗</button></article>
+<article class="plan"><div class="plan-kicker">FOR VISIONARIES</div><h3>Studio</h3><div class="plan-price">₹1,499 <small>/ month*</small></div><p class="plan-desc">A bigger canvas for ambitious work.</p><ul><li>800 monthly credits*</li><li>All design worlds</li><li>Higher generation priority*</li><li>Expanded creative workflow*</li></ul><button class="plan-button" data-plan="Studio">Choose Studio ↗</button></article>
+</div><p class="pricing-footnote">*Proposed launch pricing and benefits for planning purposes. Credits, subscription billing, and premium features are not active yet.</p><p class="plan-feedback" id="planFeedback" aria-live="polite"></p>
+</section>
 <section class="blue-band"><div class="wrap inner"><div><p>Creativity, reimagined</p><h2>Your imagination is the only limit.</h2></div><a class="btn btn-outline" href="#approach">Explore the process ↗</a></div></section>
 <section class="section wrap" id="approach">
 <div class="section-head"><div><div class="eyebrow">From thought to possibility</div><h2>Made for imagination.</h2></div><p>A considered creative experience where your vision leads and AI expands what is possible.</p></div>
@@ -76,6 +88,8 @@ footer{padding:36px 0;border-top:1px solid var(--line);display:flex;justify-cont
 <script>
 document.querySelectorAll('.world[data-world]').forEach(card=>card.addEventListener('click',()=>{const s=document.getElementById('worldSelect');if(s)s.value=card.dataset.world;}));
 document.getElementById('createBtn')?.addEventListener('click',()=>{const world=document.getElementById('worldSelect').value;const prompt=document.getElementById('ideaPrompt').value.trim();const style=document.getElementById('styleSelect').value;const msg=document.getElementById('studioMessage');msg.textContent=prompt?world+' concept captured — “'+prompt+'” / Direction: '+style+'. AI generation will be enabled in the next phase.':'Add a short description of your idea first.';});
+
+document.querySelectorAll('.plan-button').forEach(button=>button.addEventListener('click',()=>{const feedback=document.getElementById('planFeedback');feedback.textContent=button.dataset.plan+' plan selected — checkout will be available when YUGA billing is connected.';}));
 </script>
 </body>
 </html>
