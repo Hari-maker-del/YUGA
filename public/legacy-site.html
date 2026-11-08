@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#000000" />
+<meta name="description" content="YUGA — The Universe of Design. Explore fashion, architecture, interiors and accessories, reimagined with AI." />
+<title>YUGA — The Universe of Design</title>
+<link rel="icon" type="image/png" href="file_00000000f24c82119e235a78b73424b4.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000;--white:#fff;--blue:#2C3480;--muted:#a8a8ad;--line:rgba(255,255,255,.16);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1320px,calc(100% - 56px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:5;background:#000}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);letter-spacing:.16em;font-size:24px}.logo-mark{width:52px;height:52px;display:block;object-fit:contain;flex:none}
+nav{display:flex;gap:34px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#d2d2d2}nav a:hover{color:#9ca6ff}.nav-cta{padding:12px 18px;border:1px solid #fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:.25s}.nav-cta:hover{background:#fff;color:#000}
+.hero{min-height:690px;display:grid;grid-template-columns:1fr 1.05fr;gap:36px;align-items:center;padding:64px 0 72px;position:relative}.hero-copy{position:relative;z-index:2}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#aeb4ff;display:flex;align-items:center;gap:12px}.eyebrow:before{content:'';width:28px;height:1px;background:#aeb4ff}.hero h1{font-family:var(--serif);font-size:clamp(54px,7vw,100px);font-weight:500;line-height:.98;letter-spacing:-.04em;margin:26px 0}.hero h1 em{color:#9ca6ff;font-weight:500}.hero p{max-width:430px;color:#b5b5bb;line-height:1.8;font-size:14px}.hero-actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:16px 22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid #fff;transition:.25s}.btn-primary{background:#fff;color:#000}.btn-primary:hover{background:var(--blue);border-color:var(--blue);color:#fff}.btn-outline:hover{background:#fff;color:#000}.hero-note{margin-top:52px;color:#777;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.hero-art{height:560px;position:relative;overflow:hidden;background:#151515}.hero-art img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);display:block}.hero-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,transparent 35%),linear-gradient(0deg,rgba(0,0,0,.4),transparent 50%)}.art-label{position:absolute;bottom:28px;left:28px;z-index:1;font-family:var(--serif);font-size:22px;letter-spacing:.02em}.art-label small{display:block;font:10px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#c5c5c5;margin-bottom:8px}
+.section{padding:100px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px}.section-head h2{font:500 clamp(36px,5vw,64px)/1.05 var(--serif);margin:14px 0 0}.section-head p{color:#999;max-width:360px;font-size:13px;line-height:1.7}
+.worlds{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.world{min-height:390px;position:relative;overflow:hidden;background:#171717}.world img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:grayscale(100%);transition:transform .6s,filter .6s}.world:hover img{transform:scale(1.05);filter:grayscale(40%)}.world:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.9),transparent 70%)}.world-content{position:absolute;bottom:24px;left:22px;right:22px;z-index:1}.world-num{font-size:10px;color:#b7bdff;letter-spacing:.16em}.world h3{font:500 30px var(--serif);margin:10px 0}.world p{font-size:11px;color:#c3c3c3;line-height:1.6;margin:0}.world-arrow{position:absolute;right:20px;bottom:25px;font-size:20px;z-index:2}
+.blue-band{background:var(--blue);padding:80px 0}.blue-band .inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.blue-band h2{font:500 clamp(36px,5vw,66px)/1.1 var(--serif);max-width:750px;margin:0}.blue-band p{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}.step{border-top:1px solid #555;padding-top:22px}.step .number{font:italic 24px var(--serif);color:#9ca6ff}.step h3{font:500 26px var(--serif);margin:16px 0 10px}.step p{font-size:13px;line-height:1.8;color:#999;max-width:300px}
+footer{padding:36px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:#888;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.footer-brand{font:22px var(--serif);color:#fff;letter-spacing:.16em}
+@media(max-width:900px){nav{gap:16px}.hero{grid-template-columns:1fr;min-height:auto}.hero-art{height:460px}.worlds{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.blue-band .inner{align-items:start;flex-direction:column}}
+@media(max-width:600px){.wrap{width:calc(100% - 32px)}header{height:68px}.logo{font-size:19px}.logo-mark{width:48px;height:48px;font-size:16px}nav{display:none}.hero{padding:55px 0}.hero h1{font-size:58px}.hero-art{height:360px}.section{padding:70px 0}.worlds{grid-template-columns:1fr}.world{min-height:360px}.process{grid-template-columns:1fr;gap:24px}.blue-band{padding:60px 0}footer{align-items:start;flex-direction:column}}
+
+.studio-panel{max-width:760px;border:1px solid #383838;background:#080808;padding:clamp(20px,4vw,42px);display:grid;gap:14px}.studio-label{font-size:10px;letter-spacing:.18em;color:#aeb4ff;text-transform:uppercase}.studio-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:18px}.studio-status{font-size:9px;letter-spacing:.15em;color:#777}.studio-panel select,.studio-panel textarea{width:100%;background:#111;color:#fff;border:1px solid #444;padding:15px;font:14px var(--sans);border-radius:0}.studio-panel textarea{resize:vertical;line-height:1.6}.studio-panel select:focus,.studio-panel textarea:focus{outline:1px solid #9ca6ff;border-color:#9ca6ff}.studio-panel button{justify-self:start;margin-top:10px}.studio-note{font-size:12px;color:#888;line-height:1.6;margin:0}
+
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}.plan{border:1px solid #343434;padding:28px;display:flex;flex-direction:column;position:relative;background:#070707}.plan.featured{border-color:#9ca6ff;background:linear-gradient(180deg,rgba(44,52,128,.22),#070707 45%)}.plan-badge{position:absolute;top:0;right:0;background:#9ca6ff;color:#000;padding:8px 12px;font-size:9px;letter-spacing:.12em}.plan-kicker{font-size:10px;letter-spacing:.18em;color:#aeb4ff}.plan h3{font:500 34px var(--serif);margin:18px 0 8px}.plan-price{font:500 30px var(--serif)}.plan-price small{font:11px var(--sans);color:#999}.plan-desc{font-size:12px;color:#999;min-height:36px}.plan ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:12px;color:#ccc;font-size:12px}.plan li:before{content:'✦';color:#9ca6ff;margin-right:10px}.plan-button{margin-top:auto;padding:14px 16px;background:transparent;border:1px solid #fff;color:#fff;text-transform:uppercase;letter-spacing:.12em;font-size:10px;cursor:pointer}.plan-button:hover,.plan-button.primary{background:#fff;color:#000}.pricing-footnote{font-size:11px;color:#777;line-height:1.7;margin-top:20px}.plan-feedback{color:#aeb4ff;font-size:12px;min-height:20px}
+@media(max-width:800px){.pricing-grid{grid-template-columns:1fr}.plan-desc{min-height:0}}
+
+.auth-cta{padding:11px 16px;border:1px solid #9ca6ff;color:#c6cbff;background:transparent;font-size:10px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.auth-cta:hover{background:#9ca6ff;color:#000}.account-pill{display:none;font-size:11px;color:#c6cbff;border:1px solid #343434;padding:10px 12px}.auth-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:99;align-items:center;justify-content:center;padding:20px}.auth-overlay.open{display:flex}.auth-box{width:min(440px,100%);background:#080808;border:1px solid #555;padding:28px;position:relative}.auth-box h2{font:500 32px var(--serif);margin:0 0 8px}.auth-box p{font-size:12px;color:#999;line-height:1.6}.auth-box input{width:100%;padding:14px;background:#111;border:1px solid #444;color:#fff;margin:8px 0;font:14px var(--sans)}.auth-box button{cursor:pointer}.auth-close{position:absolute;right:14px;top:12px;background:none;border:0;color:#fff;font-size:24px}.auth-submit{width:100%;padding:14px;background:#fff;color:#000;border:0;text-transform:uppercase;letter-spacing:.12em;margin-top:8px}.auth-switch{background:none;border:0;color:#aeb4ff;text-decoration:underline;margin-top:14px}.auth-message{min-height:22px;color:#aeb4ff;font-size:12px}.account-actions{display:flex;align-items:center;gap:8px}@media(max-width:600px){.account-actions{gap:5px}.auth-cta{padding:9px 10px;font-size:9px}.account-pill{font-size:9px;padding:8px}}
+/* YUGA immersive 3D layer */
+:root{--gold:#d6b56d;--gold-soft:#f0dca8}
+body{background:radial-gradient(ellipse at 50% -15%,rgba(176,139,65,.13),transparent 42%),#000;perspective:1200px}
+header{position:sticky;top:0;backdrop-filter:blur(18px);background:rgba(0,0,0,.78);border-bottom-color:rgba(214,181,109,.22)}
+.logo{color:#f3e4bd;text-shadow:0 0 22px rgba(214,181,109,.18)}
+nav a{transition:color .25s,transform .25s}nav a:hover{color:var(--gold);transform:translateY(-2px)}
+.hero-art{transform-style:preserve-3d;border:1px solid rgba(214,181,109,.24);box-shadow:0 30px 90px rgba(0,0,0,.65),0 0 60px rgba(214,181,109,.06);transition:transform .2s ease-out}
+.hero-art img{transform:scale(1.04);transition:transform .8s ease,filter .8s}
+.hero-art:hover img{transform:scale(1.1);filter:grayscale(20%)}
+.hero-art:before{content:"";position:absolute;inset:12px;border:1px solid rgba(214,181,109,.24);z-index:1;pointer-events:none}
+.world{transform-style:preserve-3d;border:1px solid rgba(214,181,109,.14);transition:transform .25s ease,box-shadow .3s,border-color .3s;box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.world:hover{border-color:rgba(214,181,109,.55);box-shadow:0 24px 60px rgba(214,181,109,.1),0 18px 38px rgba(0,0,0,.7)}
+.world-content{transform:translateZ(30px)}
+.world-num,.eyebrow{color:var(--gold)}
+.hero h1 em,.section h2 em{color:var(--gold-soft)}
+.btn-primary{background:linear-gradient(135deg,#f2e3bb,#c8a45b);border-color:#d6b56d;color:#050505}
+.btn-primary:hover{background:#fff;color:#000;border-color:#fff}
+.btn-outline{border-color:rgba(214,181,109,.65)}
+.btn-outline:hover{background:var(--gold-soft);color:#000}
+.blue-band{background:linear-gradient(120deg,#17130b,#302516 55%,#0b0a08);border-block:1px solid rgba(214,181,109,.2)}
+.studio-panel,.plan-card,.auth-box{border-color:rgba(214,181,109,.28);box-shadow:0 20px 60px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.04)}
+.studio-panel select:focus,.studio-panel textarea:focus{outline-color:var(--gold)}
+.step{transition:transform .3s,border-color .3s}.step:hover{transform:translateY(-6px);border-color:var(--gold)}
+.step .number{color:var(--gold)}
+footer{border-top-color:rgba(214,181,109,.22)}
+.reveal-3d{opacity:0;transform:translateY(36px) rotateX(5deg);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal-3d.is-visible{opacity:1;transform:translateY(0) rotateX(0)}
+.yuga-cursor-glow{position:fixed;width:280px;height:280px;pointer-events:none;z-index:0;border-radius:50%;background:radial-gradient(circle,rgba(214,181,109,.075),transparent 68%);transform:translate(-50%,-50%);mix-blend-mode:screen}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal-3d{opacity:1;transform:none}}
+@media(max-width:700px){.hero-art{transform:none!important}.world:hover{transform:none!important}.yuga-cursor-glow{display:none}}
+
+</style>
+</head>
+<body>
+<header class="wrap">
+<a class="logo" href="#" aria-label="YUGA home"><img class="logo-mark" src="file_00000000f24c82119e235a78b73424b4.png" alt="YUGA emblem"> YUGA</a>
+<nav aria-label="Main navigation"><a href="#worlds">Design worlds</a><a href="#pricing">Plans</a><a href="#approach">Our approach</a><a href="#about">About</a></nav>
+<div class="account-actions"><span class="account-pill" id="accountPill"></span><button class="auth-cta" id="authOpen" type="button">Sign in</button><button class="auth-cta" id="authLogout" type="button" style="display:none">Log out</button></div>
+</header>
+<main>
+<section class="hero wrap">
+<div class="hero-copy">
+<div class="eyebrow">A new era of imagination</div>
+<h1>The universe<br>of <em>design.</em></h1>
+<p>Where human imagination meets artificial intelligence. Discover a new dimension of creativity across fashion, architecture, interiors and objects.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#worlds">Enter the universe <span>↗</span></a><a class="btn btn-outline" href="#approach">Discover YUGA</a></div>
+<div class="hero-note">Imagine beyond the ordinary · Est. 2026</div>
+</div>
+<div class="hero-art"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85" alt="Editorial fashion portrait" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85'"><div class="art-label"><small>YUGA / Visual exploration 001</small>Ideas without boundaries.</div></div>
+</section>
+<section class="section wrap" id="worlds">
+<div class="section-head"><div><div class="eyebrow">Four worlds. Infinite possibilities.</div><h2>Choose your universe.</h2></div><p>Step into a creative world built to transform a spark of inspiration into something extraordinary.</p></div>
+<div class="worlds">
+<a class="world" href="#studio" data-world="Fashion"><img loading="lazy" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" alt="Fashion editorial"><div class="world-content"><span class="world-num">01 / STYLE</span><h3>Fashion</h3><p>Wearable ideas. Unwritten trends.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#studio" data-world="Fashion"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Modern architecture"><div class="world-content"><span class="world-num">02 / SPACE</span><h3>Architecture</h3><p>Structures shaped by imagination.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#studio" data-world="Fashion"><img loading="lazy" src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80" alt="Jewelry accessories"><div class="world-content"><span class="world-num">03 / OBJECTS</span><h3>Accessories</h3><p>Details that define the extraordinary.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#studio" data-world="Fashion"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Interior design"><div class="world-content"><span class="world-num">04 / LIVING</span><h3>Interiors</h3><p>Spaces with a point of view.</p></div><span class="world-arrow">↗</span></a>
+</div>
+</section>
+
+<section class="section wrap" id="studio">
+<div class="section-head"><div><div class="eyebrow">Your creative starting point</div><h2>Enter the design studio.</h2></div><p>Choose a world, describe your idea, and shape the direction of your next creation.</p></div>
+<div class="studio-panel"><div class="studio-top"><span class="studio-label">YUGA / AI DESIGN STUDIO</span><span class="studio-status">PREVIEW EXPERIENCE</span></div>
+<label class="studio-label" for="worldSelect">DESIGN WORLD</label><select id="worldSelect"><option>Fashion</option><option>Architecture</option><option>Accessories</option><option>Interiors</option></select>
+<label class="studio-label" for="ideaPrompt">YOUR IDEA</label><textarea id="ideaPrompt" rows="4" placeholder="Describe what you imagine… e.g. sculptural couture inspired by moonlight and liquid silver"></textarea>
+<label class="studio-label" for="styleSelect">CREATIVE DIRECTION</label><select id="styleSelect"><option>Editorial luxury</option><option>Minimalist</option><option>Futuristic</option><option>Organic / natural</option><option>Avant-garde</option><option>Photorealistic</option></select>
+<button class="btn btn-primary" id="createBtn" type="button">Generate design · 1 credit ↗</button><p class="studio-note" id="studioMessage" aria-live="polite">AI design generation uses 1 credit per image. Sign in to generate and save.</p><div id="generatedResult" style="display:none;margin-top:18px"><img id="generatedImage" alt="Your generated YUGA design" style="width:100%;max-width:720px;display:block;border:1px solid #444"><a id="downloadDesign" class="btn btn-outline" style="margin-top:12px" target="_blank" rel="noopener">Open / save image ↗</a></div></div>
+</section>
+
+<section class="section wrap" id="pricing">
+<div class="section-head"><div><div class="eyebrow">Create more. Imagine further.</div><h2>Choose your universe.</h2></div><p>Start for free. Upgrade when your imagination needs more room.</p></div>
+<div class="pricing-grid">
+<article class="plan"><div class="plan-kicker">FOR EXPLORERS</div><h3>Free</h3><div class="plan-price">₹0 <small>/ forever</small></div><p class="plan-desc">A taste of what YUGA can create.</p><ul><li>20 starter credits</li><li>Access to all 4 design worlds</li><li>Standard generation queue</li><li>Personal use</li></ul><button class="plan-button" data-plan="Free">Start free ↗</button></article>
+<article class="plan featured"><div class="plan-badge">MOST POPULAR</div><div class="plan-kicker">FOR CREATORS</div><h3>Creator</h3><div class="plan-price">₹499 <small>/ month*</small></div><p class="plan-desc">Bring more of your ideas to life.</p><ul><li>200 monthly credits*</li><li>All design worlds</li><li>Priority generation*</li><li>Save and revisit creations*</li></ul><button class="plan-button primary" data-plan="Creator">Choose Creator ↗</button></article>
+<article class="plan"><div class="plan-kicker">FOR VISIONARIES</div><h3>Studio</h3><div class="plan-price">₹1,499 <small>/ month*</small></div><p class="plan-desc">A bigger canvas for ambitious work.</p><ul><li>800 monthly credits*</li><li>All design worlds</li><li>Higher generation priority*</li><li>Expanded creative workflow*</li></ul><button class="plan-button" data-plan="Studio">Choose Studio ↗</button></article>
+</div><p class="pricing-footnote">*Proposed launch pricing and benefits for planning purposes. Credits, subscription billing, and premium features are not active yet.</p><p class="plan-feedback" id="planFeedback" aria-live="polite"></p>
+</section>
+<section class="blue-band"><div class="wrap inner"><div><p>Creativity, reimagined</p><h2>Your imagination is the only limit.</h2></div><a class="btn btn-outline" href="#approach">Explore the process ↗</a></div></section>
+<section class="section wrap" id="approach">
+<div class="section-head"><div><div class="eyebrow">From thought to possibility</div><h2>Made for imagination.</h2></div><p>A considered creative experience where your vision leads and AI expands what is possible.</p></div>
+<div class="process"><div class="step"><span class="number">01</span><h3>Imagine</h3><p>Begin with a thought, a feeling, a reference, or a bold idea waiting to take shape.</p></div><div class="step"><span class="number">02</span><h3>Create</h3><p>Explore new directions and bring your concept to life with AI-powered creativity.</p></div><div class="step"><span class="number">03</span><h3>Refine</h3><p>Shape, evolve and discover possibilities until your vision feels unmistakably yours.</p></div></div>
+</section>
+<section class="section wrap" id="about"><div class="eyebrow">The beginning of something infinite</div><h2 style="font:500 clamp(40px,6vw,78px)/1.1 var(--serif);max-width:900px;margin:22px 0">A universe where every idea has a place to become <em style="color:#9ca6ff">real.</em></h2><p style="color:#999;max-width:500px;line-height:1.8">YUGA is building a new creative space for the curious, the bold, and the endlessly imaginative.</p></section>
+</main>
+<footer class="wrap"><div class="footer-brand">YUGA</div><div>THE UNIVERSE OF DESIGN</div><div>© 2026 YUGA. All rights reserved.</div></footer>
+
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const supabase = createClient('https://mmvcddlrrloyajutedrj.supabase.co','sb_publishable_CMv-iHPcDSIZKNU_9F7dgg_vjQNOq7C');
+const overlay=document.getElementById('authOverlay'), authOpen=document.getElementById('authOpen'), authClose=document.getElementById('authClose'), authForm=document.getElementById('authForm'), authSwitch=document.getElementById('authSwitch'), authSubmit=document.getElementById('authSubmit'), authName=document.getElementById('authName'), authEmail=document.getElementById('authEmail'), authPassword=document.getElementById('authPassword'), authMessage=document.getElementById('authMessage'), accountPill=document.getElementById('accountPill'), authLogout=document.getElementById('authLogout');
+let mode='signin', currentUser=null;
+function setMode(next){mode=next;authName.style.display=mode==='signup'?'block':'none';authSubmit.textContent=mode==='signup'?'Create account':'Sign in';authSwitch.textContent=mode==='signup'?'Already have an account? Sign in':'Create a new account';document.getElementById('authTitle').textContent=mode==='signup'?'Join YUGA.':'Welcome back.';document.getElementById('authSubtitle').textContent=mode==='signup'?'Create an account and receive 20 starter credits.':'Sign in to save your ideas and access your credits.';authMessage.textContent='';}
+function openAuth(){overlay.classList.add('open');authEmail.focus();}
+function closeAuth(){overlay.classList.remove('open');}
+authOpen.addEventListener('click',openAuth);authClose.addEventListener('click',closeAuth);overlay.addEventListener('click',e=>{if(e.target===overlay)closeAuth();});authSwitch.addEventListener('click',()=>setMode(mode==='signin'?'signup':'signin'));
+async function refreshAccount(){const {data:{user}}=await supabase.auth.getUser();currentUser=user;if(!user){authOpen.style.display='inline-block';authOpen.textContent='Sign in';authLogout.style.display='none';accountPill.style.display='none';return;}authOpen.style.display='none';authLogout.style.display='inline-block';accountPill.style.display='inline-block';const {data:credits}=await supabase.from('credit_accounts').select('balance').eq('user_id',user.id).maybeSingle();accountPill.textContent=(user.email||'Account')+' · '+(credits?.balance??20)+' credits';}
+authLogout.addEventListener('click',async()=>{await supabase.auth.signOut();await refreshAccount();});
+authForm.addEventListener('submit',async e=>{e.preventDefault();authSubmit.disabled=true;authMessage.textContent='Please wait…';try{if(mode==='signup'){const {data,error}=await supabase.auth.signUp({email:authEmail.value.trim(),password:authPassword.value,options:{data:{name:authName.value.trim()},emailRedirectTo:location.origin}});if(error)throw error;authMessage.textContent=data.session?'Account created!':'Account created. Check your email to confirm, then sign in.';if(data.session){closeAuth();await refreshAccount();}}else{const {error}=await supabase.auth.signInWithPassword({email:authEmail.value.trim(),password:authPassword.value});if(error)throw error;closeAuth();await refreshAccount();}}catch(err){authMessage.textContent=err.message||'Something went wrong.';}finally{authSubmit.disabled=false;}});
+supabase.auth.onAuthStateChange(()=>{setTimeout(refreshAccount,0);});
+document.querySelectorAll('.world[data-world]').forEach(card=>card.addEventListener('click',()=>{const s=document.getElementById('worldSelect');if(s)s.value=card.querySelector('h3')?.textContent||card.dataset.world;}));
+document.getElementById('createBtn')?.addEventListener('click',async()=>{const world=document.getElementById('worldSelect').value,prompt=document.getElementById('ideaPrompt').value.trim(),style=document.getElementById('styleSelect').value,msg=document.getElementById('studioMessage'),btn=document.getElementById('createBtn'),result=document.getElementById('generatedResult');if(!prompt){msg.textContent='Add a short description of your idea first.';return;}const {data:{session}}=await supabase.auth.getSession();if(!session){msg.textContent='Sign in first to generate and save your design.';openAuth();return;}btn.disabled=true;btn.textContent='Creating your design…';msg.textContent='Generating image. This can take a little while…';result.style.display='none';try{const {data,error}=await supabase.functions.invoke('yuga-generate-design',{body:{world,prompt,style}});if(error)throw error;if(data?.error)throw new Error(data.error);document.getElementById('generatedImage').src=data.imageUrl;document.getElementById('downloadDesign').href=data.imageUrl;result.style.display='block';msg.textContent='Your '+world+' design is ready. 1 credit used.';await refreshAccount();}catch(err){msg.textContent=err.message||'Generation failed. If credits were reserved, they are automatically refunded.';}finally{btn.disabled=false;btn.textContent='Generate design · 1 credit ↗';}});
+document.querySelectorAll('.plan-button').forEach(button=>button.addEventListener('click',()=>{const feedback=document.getElementById('planFeedback');feedback.textContent=button.dataset.plan+' plan selected — billing is not enabled yet.';}));
+await refreshAccount();
+</script>
+
+<div class="auth-overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle"><div class="auth-box"><button class="auth-close" id="authClose" aria-label="Close">×</button><div class="eyebrow">YUGA / YOUR ACCOUNT</div><h2 id="authTitle">Welcome back.</h2><p id="authSubtitle">Sign in to save your ideas and access your credits.</p><form id="authForm"><input id="authName" type="text" autocomplete="name" placeholder="Your name (for sign up)" style="display:none"><input id="authEmail" type="email" autocomplete="email" placeholder="Email address" required><input id="authPassword" type="password" autocomplete="current-password" placeholder="Password (min. 6 characters)" required minlength="6"><button class="auth-submit" type="submit" id="authSubmit">Sign in</button></form><button class="auth-switch" id="authSwitch" type="button">Create a new account</button><p class="auth-message" id="authMessage" aria-live="polite"></p></div></div>
+
+<script>
+(()=> {
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ // Smooth reveal on scroll
+ document.querySelectorAll('.section,.world,.step,.blue-band,.studio-panel,.plan-card').forEach(el=>el.classList.add('reveal-3d'));
+ if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal-3d').forEach(el=>io.observe(el));
+ }else document.querySelectorAll('.reveal-3d').forEach(el=>el.classList.add('is-visible'));
+ // Subtle 3D card tilt on desktop
+ if(!reduced && matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.world').forEach(card=>{
+   card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform='perspective(900px) rotateY('+x*9+'deg) rotateX('+(-y*8)+'deg) translateY(-3px)';});
+   card.addEventListener('pointerleave',()=>card.style.transform='');
+  });
+  const art=document.querySelector('.hero-art');
+  if(art){art.addEventListener('pointermove',e=>{const r=art.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;art.style.transform='perspective(1000px) rotateY('+x*5+'deg) rotateX('+(-y*4)+'deg)';});art.addEventListener('pointerleave',()=>art.style.transform='');}
+  const glow=document.createElement('div');glow.className='yuga-cursor-glow';document.body.appendChild(glow);
+  window.addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';},{passive:true});
+ }
+ // Client-side hash navigation: keep existing section anchors, animate the scroll.
+ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const target=document.querySelector(a.getAttribute('href'));if(!target)return;
+  e.preventDefault();target.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});history.replaceState(null,'',a.getAttribute('href'));
+ }));
+})();
+</script>
+
+</body>
+</html>
