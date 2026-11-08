@@ -25,6 +25,8 @@ nav{display:flex;gap:34px;font-size:11px;letter-spacing:.14em;text-transform:upp
 footer{padding:36px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:#888;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.footer-brand{font:22px var(--serif);color:#fff;letter-spacing:.16em}
 @media(max-width:900px){nav{gap:16px}.hero{grid-template-columns:1fr;min-height:auto}.hero-art{height:460px}.worlds{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.blue-band .inner{align-items:start;flex-direction:column}}
 @media(max-width:600px){.wrap{width:calc(100% - 32px)}header{height:68px}.logo{font-size:19px}.logo-mark{width:48px;height:48px;font-size:16px}nav{display:none}.hero{padding:55px 0}.hero h1{font-size:58px}.hero-art{height:360px}.section{padding:70px 0}.worlds{grid-template-columns:1fr}.world{min-height:360px}.process{grid-template-columns:1fr;gap:24px}.blue-band{padding:60px 0}footer{align-items:start;flex-direction:column}}
+
+.studio-panel{max-width:760px;border:1px solid #383838;background:#080808;padding:clamp(20px,4vw,42px);display:grid;gap:14px}.studio-label{font-size:10px;letter-spacing:.18em;color:#aeb4ff;text-transform:uppercase}.studio-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:18px}.studio-status{font-size:9px;letter-spacing:.15em;color:#777}.studio-panel select,.studio-panel textarea{width:100%;background:#111;color:#fff;border:1px solid #444;padding:15px;font:14px var(--sans);border-radius:0}.studio-panel textarea{resize:vertical;line-height:1.6}.studio-panel select:focus,.studio-panel textarea:focus{outline:1px solid #9ca6ff;border-color:#9ca6ff}.studio-panel button{justify-self:start;margin-top:10px}.studio-note{font-size:12px;color:#888;line-height:1.6;margin:0}
 </style>
 </head>
 <body>
@@ -47,11 +49,20 @@ footer{padding:36px 0;border-top:1px solid var(--line);display:flex;justify-cont
 <section class="section wrap" id="worlds">
 <div class="section-head"><div><div class="eyebrow">Four worlds. Infinite possibilities.</div><h2>Choose your universe.</h2></div><p>Step into a creative world built to transform a spark of inspiration into something extraordinary.</p></div>
 <div class="worlds">
-<a class="world" href="#approach"><img loading="lazy" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" alt="Fashion editorial"><div class="world-content"><span class="world-num">01 / STYLE</span><h3>Fashion</h3><p>Wearable ideas. Unwritten trends.</p></div><span class="world-arrow">↗</span></a>
-<a class="world" href="#approach"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Modern architecture"><div class="world-content"><span class="world-num">02 / SPACE</span><h3>Architecture</h3><p>Structures shaped by imagination.</p></div><span class="world-arrow">↗</span></a>
-<a class="world" href="#approach"><img loading="lazy" src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80" alt="Jewelry accessories"><div class="world-content"><span class="world-num">03 / OBJECTS</span><h3>Accessories</h3><p>Details that define the extraordinary.</p></div><span class="world-arrow">↗</span></a>
-<a class="world" href="#approach"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Interior design"><div class="world-content"><span class="world-num">04 / LIVING</span><h3>Interiors</h3><p>Spaces with a point of view.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#studio" data-world="Fashion"><img loading="lazy" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" alt="Fashion editorial"><div class="world-content"><span class="world-num">01 / STYLE</span><h3>Fashion</h3><p>Wearable ideas. Unwritten trends.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#studio" data-world="Fashion"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Modern architecture"><div class="world-content"><span class="world-num">02 / SPACE</span><h3>Architecture</h3><p>Structures shaped by imagination.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#studio" data-world="Fashion"><img loading="lazy" src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80" alt="Jewelry accessories"><div class="world-content"><span class="world-num">03 / OBJECTS</span><h3>Accessories</h3><p>Details that define the extraordinary.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#studio" data-world="Fashion"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Interior design"><div class="world-content"><span class="world-num">04 / LIVING</span><h3>Interiors</h3><p>Spaces with a point of view.</p></div><span class="world-arrow">↗</span></a>
 </div>
+</section>
+
+<section class="section wrap" id="studio">
+<div class="section-head"><div><div class="eyebrow">Your creative starting point</div><h2>Enter the design studio.</h2></div><p>Choose a world, describe your idea, and shape the direction of your next creation.</p></div>
+<div class="studio-panel"><div class="studio-top"><span class="studio-label">YUGA / AI DESIGN STUDIO</span><span class="studio-status">PREVIEW EXPERIENCE</span></div>
+<label class="studio-label" for="worldSelect">DESIGN WORLD</label><select id="worldSelect"><option>Fashion</option><option>Architecture</option><option>Accessories</option><option>Interiors</option></select>
+<label class="studio-label" for="ideaPrompt">YOUR IDEA</label><textarea id="ideaPrompt" rows="4" placeholder="Describe what you imagine… e.g. sculptural couture inspired by moonlight and liquid silver"></textarea>
+<label class="studio-label" for="styleSelect">CREATIVE DIRECTION</label><select id="styleSelect"><option>Editorial luxury</option><option>Minimalist</option><option>Futuristic</option><option>Organic / natural</option><option>Avant-garde</option><option>Photorealistic</option></select>
+<button class="btn btn-primary" id="createBtn" type="button">Shape my idea ↗</button><p class="studio-note" id="studioMessage" aria-live="polite">This is an interactive concept preview. AI image generation will be connected in a later phase.</p></div>
 </section>
 <section class="blue-band"><div class="wrap inner"><div><p>Creativity, reimagined</p><h2>Your imagination is the only limit.</h2></div><a class="btn btn-outline" href="#approach">Explore the process ↗</a></div></section>
 <section class="section wrap" id="approach">
@@ -61,5 +72,10 @@ footer{padding:36px 0;border-top:1px solid var(--line);display:flex;justify-cont
 <section class="section wrap" id="about"><div class="eyebrow">The beginning of something infinite</div><h2 style="font:500 clamp(40px,6vw,78px)/1.1 var(--serif);max-width:900px;margin:22px 0">A universe where every idea has a place to become <em style="color:#9ca6ff">real.</em></h2><p style="color:#999;max-width:500px;line-height:1.8">YUGA is building a new creative space for the curious, the bold, and the endlessly imaginative.</p></section>
 </main>
 <footer class="wrap"><div class="footer-brand">YUGA</div><div>THE UNIVERSE OF DESIGN</div><div>© 2026 YUGA. All rights reserved.</div></footer>
+
+<script>
+document.querySelectorAll('.world[data-world]').forEach(card=>card.addEventListener('click',()=>{const s=document.getElementById('worldSelect');if(s)s.value=card.dataset.world;}));
+document.getElementById('createBtn')?.addEventListener('click',()=>{const world=document.getElementById('worldSelect').value;const prompt=document.getElementById('ideaPrompt').value.trim();const style=document.getElementById('styleSelect').value;const msg=document.getElementById('studioMessage');msg.textContent=prompt?world+' concept captured — “'+prompt+'” / Direction: '+style+'. AI generation will be enabled in the next phase.':'Add a short description of your idea first.';});
+</script>
 </body>
 </html>
