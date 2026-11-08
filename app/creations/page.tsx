@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import MobileNav from "../components/MobileNav";
 import { supabase } from "../lib/supabase";
 
 type Design = { id: string; prompt?: string; world?: string; style?: string; image_url?: string; created_at?: string };
@@ -59,5 +60,6 @@ export default function Creations() {
       @media(max-width:850px){.creationGrid{columns:2}.collectionBar{align-items:flex-start;flex-direction:column}.collectionTools{width:100%}.creationSearch{flex:1}.creationSearch input{width:100%;min-width:80px}}
       @media(max-width:550px){.creationHero{padding:40px 0 25px}.creationHeroRow{padding:25px 0 35px}.creationHero h1{font-size:clamp(48px,13vw,72px)}.creationHero p{font-size:12px}.creationCount{display:none}.creationHeroFoot{font-size:7px}.creationBody{padding:35px 0 60px}.collectionBar h2{font-size:34px}.collectionTools{display:grid;grid-template-columns:1fr 1fr}.creationSearch{grid-column:span 2;padding:8px 10px}.collectionTools select{width:100%;font-size:9px}.creationGrid{columns:2;column-gap:10px}.creationCard{margin-bottom:15px}.creationCardMeta{padding:9px 0;flex-direction:column}.creationCardMeta h3{font-size:15px}.creationWorld{font-size:7px}.creationEnd{margin-top:50px;padding:28px 18px;align-items:flex-start;flex-direction:column}.creationEnd h2{font-size:42px}}
     `}</style>
-  </main>;
+  <MobileNav />
+</main>;
 }
