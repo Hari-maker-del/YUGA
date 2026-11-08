@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import MobileNav from "../components/MobileNav";
 
 type Inspiration = { id: number; title: string; world: string; style: string; creator: string; image: string; height: number; };
 
@@ -127,6 +128,7 @@ export default function Explore() {
         @media(max-width:900px){.inspirationGrid{columns:2}.exploreHero{padding-top:55px}.exploreHeroRow{padding:30px 0 40px}}
         @media(max-width:600px){.exploreHero{padding:40px 0 25px}.exploreHeroRow{padding:25px 0 35px}.exploreHero h1{font-size:clamp(58px,17vw,86px)}.exploreHeroRow p{font-size:12px;max-width:290px}.heroSideNote{display:none}.exploreHeroBottom{font-size:7px;gap:12px}.exploreHeroBottom span:last-child{text-align:right}.exploreControls{padding:13px}.filterLabel{width:100%;margin-bottom:3px}.filterChip{padding:7px 9px;font-size:9px}.exploreTools{flex-direction:column}.searchBox{max-width:none}.galleryHeading{padding:45px 0 20px;gap:10px;align-items:flex-end}.galleryHeading h2{font-size:31px}.galleryCount{font-size:7px;white-space:nowrap}.inspirationGrid{columns:2;column-gap:10px}.inspirationCard{margin-bottom:14px}.inspirationMeta{padding:9px 0;flex-direction:column}.inspirationMeta h3{font-size:15px}.inspirationMeta p{font-size:8px}.styleTag{font-size:7px;padding:4px 6px}.createSimilar{opacity:1;transform:none;bottom:10px;left:8px;padding:8px;font-size:7px}.saveButton{width:30px;height:30px;right:8px;top:8px;font-size:17px}.cardNumber{top:9px;left:9px;font-size:7px}.exploreCta{margin-top:55px;padding:30px 20px;flex-direction:column;align-items:flex-start}.exploreCta h2{font-size:43px}.exploreNav .navbutton{font-size:8px}.exploreNav .brand{font-size:18px}}
       `}</style>
-    </main>
+    <MobileNav />
+</main>
   );
 }
