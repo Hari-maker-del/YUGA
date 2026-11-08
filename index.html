@@ -31,7 +31,39 @@ footer{padding:36px 0;border-top:1px solid var(--line);display:flex;justify-cont
 .pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}.plan{border:1px solid #343434;padding:28px;display:flex;flex-direction:column;position:relative;background:#070707}.plan.featured{border-color:#9ca6ff;background:linear-gradient(180deg,rgba(44,52,128,.22),#070707 45%)}.plan-badge{position:absolute;top:0;right:0;background:#9ca6ff;color:#000;padding:8px 12px;font-size:9px;letter-spacing:.12em}.plan-kicker{font-size:10px;letter-spacing:.18em;color:#aeb4ff}.plan h3{font:500 34px var(--serif);margin:18px 0 8px}.plan-price{font:500 30px var(--serif)}.plan-price small{font:11px var(--sans);color:#999}.plan-desc{font-size:12px;color:#999;min-height:36px}.plan ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:12px;color:#ccc;font-size:12px}.plan li:before{content:'✦';color:#9ca6ff;margin-right:10px}.plan-button{margin-top:auto;padding:14px 16px;background:transparent;border:1px solid #fff;color:#fff;text-transform:uppercase;letter-spacing:.12em;font-size:10px;cursor:pointer}.plan-button:hover,.plan-button.primary{background:#fff;color:#000}.pricing-footnote{font-size:11px;color:#777;line-height:1.7;margin-top:20px}.plan-feedback{color:#aeb4ff;font-size:12px;min-height:20px}
 @media(max-width:800px){.pricing-grid{grid-template-columns:1fr}.plan-desc{min-height:0}}
 
-.auth-cta{padding:11px 16px;border:1px solid #9ca6ff;color:#c6cbff;background:transparent;font-size:10px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.auth-cta:hover{background:#9ca6ff;color:#000}.account-pill{display:none;font-size:11px;color:#c6cbff;border:1px solid #343434;padding:10px 12px}.auth-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:99;align-items:center;justify-content:center;padding:20px}.auth-overlay.open{display:flex}.auth-box{width:min(440px,100%);background:#080808;border:1px solid #555;padding:28px;position:relative}.auth-box h2{font:500 32px var(--serif);margin:0 0 8px}.auth-box p{font-size:12px;color:#999;line-height:1.6}.auth-box input{width:100%;padding:14px;background:#111;border:1px solid #444;color:#fff;margin:8px 0;font:14px var(--sans)}.auth-box button{cursor:pointer}.auth-close{position:absolute;right:14px;top:12px;background:none;border:0;color:#fff;font-size:24px}.auth-submit{width:100%;padding:14px;background:#fff;color:#000;border:0;text-transform:uppercase;letter-spacing:.12em;margin-top:8px}.auth-switch{background:none;border:0;color:#aeb4ff;text-decoration:underline;margin-top:14px}.auth-message{min-height:22px;color:#aeb4ff;font-size:12px}.account-actions{display:flex;align-items:center;gap:8px}@media(max-width:600px){.account-actions{gap:5px}.auth-cta{padding:9px 10px;font-size:9px}.account-pill{font-size:9px;padding:8px}}</style>
+.auth-cta{padding:11px 16px;border:1px solid #9ca6ff;color:#c6cbff;background:transparent;font-size:10px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.auth-cta:hover{background:#9ca6ff;color:#000}.account-pill{display:none;font-size:11px;color:#c6cbff;border:1px solid #343434;padding:10px 12px}.auth-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:99;align-items:center;justify-content:center;padding:20px}.auth-overlay.open{display:flex}.auth-box{width:min(440px,100%);background:#080808;border:1px solid #555;padding:28px;position:relative}.auth-box h2{font:500 32px var(--serif);margin:0 0 8px}.auth-box p{font-size:12px;color:#999;line-height:1.6}.auth-box input{width:100%;padding:14px;background:#111;border:1px solid #444;color:#fff;margin:8px 0;font:14px var(--sans)}.auth-box button{cursor:pointer}.auth-close{position:absolute;right:14px;top:12px;background:none;border:0;color:#fff;font-size:24px}.auth-submit{width:100%;padding:14px;background:#fff;color:#000;border:0;text-transform:uppercase;letter-spacing:.12em;margin-top:8px}.auth-switch{background:none;border:0;color:#aeb4ff;text-decoration:underline;margin-top:14px}.auth-message{min-height:22px;color:#aeb4ff;font-size:12px}.account-actions{display:flex;align-items:center;gap:8px}@media(max-width:600px){.account-actions{gap:5px}.auth-cta{padding:9px 10px;font-size:9px}.account-pill{font-size:9px;padding:8px}}
+/* YUGA immersive 3D layer */
+:root{--gold:#d6b56d;--gold-soft:#f0dca8}
+body{background:radial-gradient(ellipse at 50% -15%,rgba(176,139,65,.13),transparent 42%),#000;perspective:1200px}
+header{position:sticky;top:0;backdrop-filter:blur(18px);background:rgba(0,0,0,.78);border-bottom-color:rgba(214,181,109,.22)}
+.logo{color:#f3e4bd;text-shadow:0 0 22px rgba(214,181,109,.18)}
+nav a{transition:color .25s,transform .25s}nav a:hover{color:var(--gold);transform:translateY(-2px)}
+.hero-art{transform-style:preserve-3d;border:1px solid rgba(214,181,109,.24);box-shadow:0 30px 90px rgba(0,0,0,.65),0 0 60px rgba(214,181,109,.06);transition:transform .2s ease-out}
+.hero-art img{transform:scale(1.04);transition:transform .8s ease,filter .8s}
+.hero-art:hover img{transform:scale(1.1);filter:grayscale(20%)}
+.hero-art:before{content:"";position:absolute;inset:12px;border:1px solid rgba(214,181,109,.24);z-index:1;pointer-events:none}
+.world{transform-style:preserve-3d;border:1px solid rgba(214,181,109,.14);transition:transform .25s ease,box-shadow .3s,border-color .3s;box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.world:hover{border-color:rgba(214,181,109,.55);box-shadow:0 24px 60px rgba(214,181,109,.1),0 18px 38px rgba(0,0,0,.7)}
+.world-content{transform:translateZ(30px)}
+.world-num,.eyebrow{color:var(--gold)}
+.hero h1 em,.section h2 em{color:var(--gold-soft)}
+.btn-primary{background:linear-gradient(135deg,#f2e3bb,#c8a45b);border-color:#d6b56d;color:#050505}
+.btn-primary:hover{background:#fff;color:#000;border-color:#fff}
+.btn-outline{border-color:rgba(214,181,109,.65)}
+.btn-outline:hover{background:var(--gold-soft);color:#000}
+.blue-band{background:linear-gradient(120deg,#17130b,#302516 55%,#0b0a08);border-block:1px solid rgba(214,181,109,.2)}
+.studio-panel,.plan-card,.auth-box{border-color:rgba(214,181,109,.28);box-shadow:0 20px 60px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.04)}
+.studio-panel select:focus,.studio-panel textarea:focus{outline-color:var(--gold)}
+.step{transition:transform .3s,border-color .3s}.step:hover{transform:translateY(-6px);border-color:var(--gold)}
+.step .number{color:var(--gold)}
+footer{border-top-color:rgba(214,181,109,.22)}
+.reveal-3d{opacity:0;transform:translateY(36px) rotateX(5deg);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal-3d.is-visible{opacity:1;transform:translateY(0) rotateX(0)}
+.yuga-cursor-glow{position:fixed;width:280px;height:280px;pointer-events:none;z-index:0;border-radius:50%;background:radial-gradient(circle,rgba(214,181,109,.075),transparent 68%);transform:translate(-50%,-50%);mix-blend-mode:screen}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal-3d{opacity:1;transform:none}}
+@media(max-width:700px){.hero-art{transform:none!important}.world:hover{transform:none!important}.yuga-cursor-glow{display:none}}
+
+</style>
 </head>
 <body>
 <header class="wrap">
@@ -106,5 +138,34 @@ await refreshAccount();
 </script>
 
 <div class="auth-overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle"><div class="auth-box"><button class="auth-close" id="authClose" aria-label="Close">×</button><div class="eyebrow">YUGA / YOUR ACCOUNT</div><h2 id="authTitle">Welcome back.</h2><p id="authSubtitle">Sign in to save your ideas and access your credits.</p><form id="authForm"><input id="authName" type="text" autocomplete="name" placeholder="Your name (for sign up)" style="display:none"><input id="authEmail" type="email" autocomplete="email" placeholder="Email address" required><input id="authPassword" type="password" autocomplete="current-password" placeholder="Password (min. 6 characters)" required minlength="6"><button class="auth-submit" type="submit" id="authSubmit">Sign in</button></form><button class="auth-switch" id="authSwitch" type="button">Create a new account</button><p class="auth-message" id="authMessage" aria-live="polite"></p></div></div>
+
+<script>
+(()=> {
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ // Smooth reveal on scroll
+ document.querySelectorAll('.section,.world,.step,.blue-band,.studio-panel,.plan-card').forEach(el=>el.classList.add('reveal-3d'));
+ if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal-3d').forEach(el=>io.observe(el));
+ }else document.querySelectorAll('.reveal-3d').forEach(el=>el.classList.add('is-visible'));
+ // Subtle 3D card tilt on desktop
+ if(!reduced && matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.world').forEach(card=>{
+   card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform='perspective(900px) rotateY('+x*9+'deg) rotateX('+(-y*8)+'deg) translateY(-3px)';});
+   card.addEventListener('pointerleave',()=>card.style.transform='');
+  });
+  const art=document.querySelector('.hero-art');
+  if(art){art.addEventListener('pointermove',e=>{const r=art.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;art.style.transform='perspective(1000px) rotateY('+x*5+'deg) rotateX('+(-y*4)+'deg)';});art.addEventListener('pointerleave',()=>art.style.transform='');}
+  const glow=document.createElement('div');glow.className='yuga-cursor-glow';document.body.appendChild(glow);
+  window.addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';},{passive:true});
+ }
+ // Client-side hash navigation: keep existing section anchors, animate the scroll.
+ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const target=document.querySelector(a.getAttribute('href'));if(!target)return;
+  e.preventDefault();target.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});history.replaceState(null,'',a.getAttribute('href'));
+ }));
+})();
+</script>
+
 </body>
 </html>
