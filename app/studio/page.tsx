@@ -1,5 +1,6 @@
 "use client";
 import {useEffect,useState} from "react";
+import MobileNav from "../components/MobileNav";
 export default function Studio(){
  const [world,setWorld]=useState("");
  useEffect(()=>{const w=new URLSearchParams(window.location.search).get("world");if(w)setWorld(w)},[]);
@@ -26,5 +27,6 @@ export default function Studio(){
    .studio-footer{display:flex;justify-content:space-between;gap:14px;padding:24px clamp(16px,4vw,56px);color:#666;font-size:9px;letter-spacing:.12em}
    @media(max-width:650px){.studio-header{height:62px}.studio-brand{font-size:20px}.studio-heading{display:none}.studio-header-actions{gap:10px;font-size:10px}.studio-live{font-size:8px}.studio-subnav{font-size:8px;letter-spacing:.06em;padding:12px 14px}.studio-subnav span{display:none}.studio-intro{display:block;padding:30px 16px 24px}.studio-intro h1{font-size:45px}.studio-tip{margin-top:20px;max-width:none}.studio-frame-wrap{margin:0 6px}.studio-frame-top{height:36px;padding:0 10px}.studio-frame-top span{font-size:8px}.studio-frame{height:calc(100dvh - 110px);min-height:700px}.studio-footer{flex-direction:column;padding:22px 16px}}
   `}</style>
- </main>
+ <MobileNav />
+</main>
 }
