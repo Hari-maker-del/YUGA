@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#000000" />
+<meta name="description" content="YUGA — The Universe of Design. Explore fashion, architecture, interiors and accessories, reimagined with AI." />
+<title>YUGA — The Universe of Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000;--white:#fff;--blue:#2C3480;--muted:#a8a8ad;--line:rgba(255,255,255,.16);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1320px,calc(100% - 56px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:5;background:#000}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);letter-spacing:.16em;font-size:24px}.logo-mark{width:32px;height:32px;border:1px solid #fff;display:grid;place-items:center;font-family:var(--serif);font-size:20px;transform:rotate(45deg)}.logo-mark span{transform:rotate(-45deg)}
+nav{display:flex;gap:34px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#d2d2d2}nav a:hover{color:#9ca6ff}.nav-cta{padding:12px 18px;border:1px solid #fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:.25s}.nav-cta:hover{background:#fff;color:#000}
+.hero{min-height:690px;display:grid;grid-template-columns:1fr 1.05fr;gap:36px;align-items:center;padding:64px 0 72px;position:relative}.hero-copy{position:relative;z-index:2}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#aeb4ff;display:flex;align-items:center;gap:12px}.eyebrow:before{content:'';width:28px;height:1px;background:#aeb4ff}.hero h1{font-family:var(--serif);font-size:clamp(54px,7vw,100px);font-weight:500;line-height:.98;letter-spacing:-.04em;margin:26px 0}.hero h1 em{color:#9ca6ff;font-weight:500}.hero p{max-width:430px;color:#b5b5bb;line-height:1.8;font-size:14px}.hero-actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:16px 22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid #fff;transition:.25s}.btn-primary{background:#fff;color:#000}.btn-primary:hover{background:var(--blue);border-color:var(--blue);color:#fff}.btn-outline:hover{background:#fff;color:#000}.hero-note{margin-top:52px;color:#777;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.hero-art{height:560px;position:relative;overflow:hidden;background:#151515}.hero-art img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);display:block}.hero-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,transparent 35%),linear-gradient(0deg,rgba(0,0,0,.4),transparent 50%)}.art-label{position:absolute;bottom:28px;left:28px;z-index:1;font-family:var(--serif);font-size:22px;letter-spacing:.02em}.art-label small{display:block;font:10px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#c5c5c5;margin-bottom:8px}
+.section{padding:100px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px}.section-head h2{font:500 clamp(36px,5vw,64px)/1.05 var(--serif);margin:14px 0 0}.section-head p{color:#999;max-width:360px;font-size:13px;line-height:1.7}
+.worlds{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.world{min-height:390px;position:relative;overflow:hidden;background:#171717}.world img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:grayscale(100%);transition:transform .6s,filter .6s}.world:hover img{transform:scale(1.05);filter:grayscale(40%)}.world:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.9),transparent 70%)}.world-content{position:absolute;bottom:24px;left:22px;right:22px;z-index:1}.world-num{font-size:10px;color:#b7bdff;letter-spacing:.16em}.world h3{font:500 30px var(--serif);margin:10px 0}.world p{font-size:11px;color:#c3c3c3;line-height:1.6;margin:0}.world-arrow{position:absolute;right:20px;bottom:25px;font-size:20px;z-index:2}
+.blue-band{background:var(--blue);padding:80px 0}.blue-band .inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.blue-band h2{font:500 clamp(36px,5vw,66px)/1.1 var(--serif);max-width:750px;margin:0}.blue-band p{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}.step{border-top:1px solid #555;padding-top:22px}.step .number{font:italic 24px var(--serif);color:#9ca6ff}.step h3{font:500 26px var(--serif);margin:16px 0 10px}.step p{font-size:13px;line-height:1.8;color:#999;max-width:300px}
+footer{padding:36px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:#888;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.footer-brand{font:22px var(--serif);color:#fff;letter-spacing:.16em}
+@media(max-width:900px){nav{gap:16px}.hero{grid-template-columns:1fr;min-height:auto}.hero-art{height:460px}.worlds{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.blue-band .inner{align-items:start;flex-direction:column}}
+@media(max-width:600px){.wrap{width:calc(100% - 32px)}header{height:68px}.logo{font-size:19px}.logo-mark{width:26px;height:26px;font-size:16px}nav{display:none}.hero{padding:55px 0}.hero h1{font-size:58px}.hero-art{height:360px}.section{padding:70px 0}.worlds{grid-template-columns:1fr}.world{min-height:360px}.process{grid-template-columns:1fr;gap:24px}.blue-band{padding:60px 0}footer{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="wrap">
+<a class="logo" href="#" aria-label="YUGA home"><span class="logo-mark"><span>Y</span></span> YUGA</a>
+<nav aria-label="Main navigation"><a href="#worlds">Design worlds</a><a href="#approach">Our approach</a><a href="#about">About</a></nav>
+<a class="nav-cta" href="#worlds">Explore YUGA ↗</a>
+</header>
+<main>
+<section class="hero wrap">
+<div class="hero-copy">
+<div class="eyebrow">A new era of imagination</div>
+<h1>The universe<br>of <em>design.</em></h1>
+<p>Where human imagination meets artificial intelligence. Discover a new dimension of creativity across fashion, architecture, interiors and objects.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#worlds">Enter the universe <span>↗</span></a><a class="btn btn-outline" href="#approach">Discover YUGA</a></div>
+<div class="hero-note">Imagine beyond the ordinary · Est. 2026</div>
+</div>
+<div class="hero-art"><img src="https://images.unsplash.com/photo-153910 дев" alt="Editorial fashion portrait" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85'"><div class="art-label"><small>YUGA / Visual exploration 001</small>Ideas without boundaries.</div></div>
+</section>
+<section class="section wrap" id="worlds">
+<div class="section-head"><div><div class="eyebrow">Four worlds. Infinite possibilities.</div><h2>Choose your universe.</h2></div><p>Step into a creative world built to transform a spark of inspiration into something extraordinary.</p></div>
+<div class="worlds">
+<a class="world" href="#approach"><img loading="lazy" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" alt="Fashion editorial"><div class="world-content"><span class="world-num">01 / STYLE</span><h3>Fashion</h3><p>Wearable ideas. Unwritten trends.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#approach"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Modern architecture"><div class="world-content"><span class="world-num">02 / SPACE</span><h3>Architecture</h3><p>Structures shaped by imagination.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#approach"><img loading="lazy" src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80" alt="Jewelry accessories"><div class="world-content"><span class="world-num">03 / OBJECTS</span><h3>Accessories</h3><p>Details that define the extraordinary.</p></div><span class="world-arrow">↗</span></a>
+<a class="world" href="#approach"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Interior design"><div class="world-content"><span class="world-num">04 / LIVING</span><h3>Interiors</h3><p>Spaces with a point of view.</p></div><span class="world-arrow">↗</span></a>
+</div>
+</section>
+<section class="blue-band"><div class="wrap inner"><div><p>Creativity, reimagined</p><h2>Your imagination is the only limit.</h2></div><a class="btn btn-outline" href="#approach">Explore the process ↗</a></div></section>
+<section class="section wrap" id="approach">
+<div class="section-head"><div><div class="eyebrow">From thought to possibility</div><h2>Made for imagination.</h2></div><p>A considered creative experience where your vision leads and AI expands what is possible.</p></div>
+<div class="process"><div class="step"><span class="number">01</span><h3>Imagine</h3><p>Begin with a thought, a feeling, a reference, or a bold idea waiting to take shape.</p></div><div class="step"><span class="number">02</span><h3>Create</h3><p>Explore new directions and bring your concept to life with AI-powered creativity.</p></div><div class="step"><span class="number">03</span><h3>Refine</h3><p>Shape, evolve and discover possibilities until your vision feels unmistakably yours.</p></div></div>
+</section>
+<section class="section wrap" id="about"><div class="eyebrow">The beginning of something infinite</div><h2 style="font:500 clamp(40px,6vw,78px)/1.1 var(--serif);max-width:900px;margin:22px 0">A universe where every idea has a place to become <em style="color:#9ca6ff">real.</em></h2><p style="color:#999;max-width:500px;line-height:1.8">YUGA is building a new creative space for the curious, the bold, and the endlessly imaginative.</p></section>
+</main>
+<footer class="wrap"><div class="footer-brand">YUGA</div><div>THE UNIVERSE OF DESIGN</div><div>© 2026 YUGA. All rights reserved.</div></footer>
+</body>
+</html>
